@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>de.bucher</groupId>
+        <artifactId>commons</artifactId>
+        <version>01.04.00</version>
+    </parent>
+
+    <groupId>de.bucher.commons</groupId>
+    <artifactId>monitoring</artifactId>
+    <version>01.00.00-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.7</version>
+            </dependency>
+            <dependency>
+                <groupId>de.bucher</groupId>
+                <artifactId>commons-utils</artifactId>
+                <version>01.01.02-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.bucher.commons.monitoring</groupId>
+                <artifactId>monitoring-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>monitoring-client</module>
+        <module>monitoring-service</module>
+    </modules>
+
+</project>
