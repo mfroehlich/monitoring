@@ -5,26 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.froehlich</groupId>
-    <artifactId>baseproject</artifactId>
+    <artifactId>monitoringLogger</artifactId>
     <version>01.00.00-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.froehlich.baseproject.test-ejb</groupId>
+                <groupId>com.froehlich.monitoringLogger.test-ejb</groupId>
                 <artifactId>test-ejb-client</artifactId>
                 <version>01.00.00-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.froehlich.baseproject.test-ejb</groupId>
+                <groupId>com.froehlich.monitoringLogger.test-ejb</groupId>
                 <artifactId>test-ejb-service</artifactId>
                 <version>01.00.00-SNAPSHOT</version>
                 <type>ejb</type>
             </dependency>
 
             <dependency>
-                <groupId>com.froehlich.baseproject</groupId>
+                <groupId>com.froehlich.monitoringLogger</groupId>
                 <artifactId>test-war</artifactId>
                 <type>war</type>
                 <version>01.00.00-SNAPSHOT</version>

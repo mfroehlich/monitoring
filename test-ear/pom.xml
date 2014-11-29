@@ -3,26 +3,26 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>baseproject</artifactId>
+        <artifactId>monitoringLogger</artifactId>
         <groupId>com.froehlich</groupId>
         <version>01.00.00-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.froehlich.baseproject</groupId>
+    <groupId>com.froehlich.monitoringLogger</groupId>
     <artifactId>test-ear</artifactId>
     <packaging>ear</packaging>
 
     <dependencies>
 
         <dependency>
-            <groupId>com.froehlich.baseproject.test-ejb</groupId>
+            <groupId>com.froehlich.monitoringLogger.test-ejb</groupId>
             <artifactId>test-ejb-service</artifactId>
             <type>ejb</type>
         </dependency>
 
         <dependency>
-            <groupId>com.froehlich.baseproject</groupId>
+            <groupId>com.froehlich.monitoringLogger</groupId>
             <artifactId>test-war</artifactId>
             <type>war</type>
         </dependency>
@@ -49,7 +49,7 @@
                     <modules>
                         <!-- Rename the REST-interface-warfile (root-context) in the generated application.xml  -->
                         <webModule>
-                            <groupId>com.froehlich.baseproject</groupId>
+                            <groupId>com.froehlich.monitoringLogger</groupId>
                             <artifactId>test-war</artifactId>
                             <contextRoot>/restcontext</contextRoot>
                         </webModule>

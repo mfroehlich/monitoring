@@ -1,6 +1,6 @@
-package com.froehlich.baseproject.rest.resource;
+package com.froehlich.monitoringLogger.rest.resource;
 
-import com.froehlich.baseproject.service.MyEjbService;
+import com.froehlich.monitoringLogger.service.MyEjbService;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;

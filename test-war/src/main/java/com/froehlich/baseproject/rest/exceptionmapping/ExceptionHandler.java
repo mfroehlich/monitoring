@@ -1,4 +1,4 @@
-package com.froehlich.baseproject.rest.exceptionmapping;
+package com.froehlich.monitoringLogger.rest.exceptionmapping;
 
 import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
 

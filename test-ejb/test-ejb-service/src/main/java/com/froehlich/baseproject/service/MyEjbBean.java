@@ -1,4 +1,4 @@
-package com.froehlich.baseproject.service;
+package com.froehlich.monitoringLogger.service;
 
 import javax.ejb.Stateless;
 

@@ -1,4 +1,4 @@
-package com.froehlich.baseproject.service;
+package com.froehlich.monitoringLogger.service;
 
 /**
  * Created by mfroehlich on 08.11.2014.

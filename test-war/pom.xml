@@ -4,18 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.froehlich</groupId>
-        <artifactId>baseproject</artifactId>
+        <artifactId>monitoringLogger</artifactId>
         <version>01.00.00-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.froehlich.baseproject</groupId>
+    <groupId>com.froehlich.monitoringLogger</groupId>
     <artifactId>test-war</artifactId>
     <packaging>war</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>com.froehlich.baseproject.test-ejb</groupId>
+            <groupId>com.froehlich.monitoringLogger.test-ejb</groupId>
             <artifactId>test-ejb-client</artifactId>
         </dependency>
     </dependencies>
