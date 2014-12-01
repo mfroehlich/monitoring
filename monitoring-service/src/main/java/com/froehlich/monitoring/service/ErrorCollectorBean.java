@@ -1,4 +1,4 @@
-package de.bucher.commons.monitoring.service;
+package com.froehlich.monitoring.service;
 
 /**
  * Created by mfroehlich on 21.11.2014.
@@ -13,10 +13,11 @@ import javax.ejb.Singleton;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
-import de.bucher.commons.mbean.MBeanRegistrator;
-import de.bucher.commons.monitoring.entity.ErrorEntry;
-import de.bucher.commons.monitoring.mbean.ErrorCollector;
-import de.bucher.commons.monitoring.mbean.ErrorCollectorMXBean;
+import com.froehlich.commons.monitoring.entity.ErrorEntry;
+import com.froehlich.commons.monitoring.service.ErrorCollectorService;
+import com.froehlich.monitoring.mbean.ErrorCollector;
+import com.froehlich.monitoring.mbean.ErrorCollectorMXBean;
+import com.froehlich.utils.mbeans.MBeanRegistrator;
 
 @Singleton
 @ApplicationScoped

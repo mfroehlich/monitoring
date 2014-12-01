@@ -1,6 +1,6 @@
-package de.bucher.commons.monitoring.entity;
+package com.froehlich.commons.monitoring.entity;
 
-import de.bucher.commons.monitoring.service.ErrorCollectorService;
+import com.froehlich.commons.monitoring.service.ErrorCollectorService;
 import org.slf4j.Logger;
 import org.slf4j.Marker;
 

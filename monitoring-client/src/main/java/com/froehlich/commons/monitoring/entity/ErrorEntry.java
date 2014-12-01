@@ -1,4 +1,4 @@
-package de.bucher.commons.monitoring.entity;
+package com.froehlich.commons.monitoring.entity;
 
 /**
  * Created by mfroehlich on 13.11.2014.

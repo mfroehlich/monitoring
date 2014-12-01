@@ -6,23 +6,23 @@
 
     <parent>
         <artifactId>monitoring</artifactId>
-        <groupId>de.bucher.commons</groupId>
+        <groupId>com.froehlich</groupId>
         <version>01.00.00-SNAPSHOT</version>
     </parent>
 
-    <groupId>de.bucher.commons.monitoring</groupId>
+    <groupId>com.froehlich.monitoring</groupId>
     <artifactId>monitoring-service</artifactId>
     <packaging>ejb</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>de.bucher.commons.monitoring</groupId>
+            <groupId>com.froehlich.monitoring</groupId>
             <artifactId>monitoring-client</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>de.bucher</groupId>
-            <artifactId>commons-utils</artifactId>
+            <groupId>com.froehlich</groupId>
+            <artifactId>utils</artifactId>
         </dependency>
 
     </dependencies>

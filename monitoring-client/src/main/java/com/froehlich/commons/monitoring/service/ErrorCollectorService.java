@@ -1,8 +1,8 @@
-package de.bucher.commons.monitoring.service;
+package com.froehlich.commons.monitoring.service;
 
 import java.util.Collection;
 
-import de.bucher.commons.monitoring.entity.ErrorEntry;
+import com.froehlich.commons.monitoring.entity.ErrorEntry;
 
 /**
  * Created by mfroehlich on 21.11.2014.

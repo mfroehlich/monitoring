@@ -5,12 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>de.bucher</groupId>
+        <groupId>com.froehlich</groupId>
         <artifactId>commons</artifactId>
-        <version>01.04.00</version>
+        <version>01.00.00-SNAPSHOT</version>
     </parent>
 
-    <groupId>de.bucher.commons</groupId>
     <artifactId>monitoring</artifactId>
     <version>01.00.00-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -18,21 +17,17 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>1.7.7</version>
-            </dependency>
-            <dependency>
-                <groupId>de.bucher</groupId>
-                <artifactId>commons-utils</artifactId>
-                <version>01.01.02-SNAPSHOT</version>
-            </dependency>
-
-            <dependency>
-                <groupId>de.bucher.commons.monitoring</groupId>
+                <groupId>com.froehlich.monitoring</groupId>
                 <artifactId>monitoring-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.froehlich</groupId>
+                <artifactId>utils</artifactId>
+                <version>01.00.00-SNAPSHOT</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
