@@ -337,7 +337,6 @@ public class ErrorCollectingLogger implements Logger {
     public void error(String s, Throwable throwable) {
 
         errorCollectorService.receiveError(throwable);
-
         loggerDelegate.error(s, throwable);
     }
 
@@ -373,6 +372,7 @@ public class ErrorCollectingLogger implements Logger {
     @Override
     public void error(Marker marker, String s, Throwable throwable) {
 
+        errorCollectorService.receiveError(throwable);
         loggerDelegate.error(marker, s, throwable);
     }
 }
