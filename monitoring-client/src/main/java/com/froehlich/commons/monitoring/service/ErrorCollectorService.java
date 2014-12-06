@@ -13,4 +13,6 @@ public interface ErrorCollectorService {
     public void receiveError(Throwable e);
 
     public Collection<ErrorEntry> getErrors();
+
+    public Collection<ErrorEntry> getAndResetErrors();
 }

@@ -18,14 +18,19 @@ import com.froehlich.commons.monitoring.entity.ErrorEntry;
 import com.froehlich.commons.monitoring.service.ErrorCollectorService;
 import com.froehlich.monitoring.mbean.ErrorCollector;
 import com.froehlich.monitoring.mbean.ErrorCollectorMXBean;
+import com.froehlich.utils.date.CurrentTimeService;
 import com.froehlich.utils.mbeans.MBeanRegistrator;
 
 @Singleton
 @ApplicationScoped
+@Startup
 public class ErrorCollectorBean implements ErrorCollectorService {
 
     @Inject
     private MBeanRegistrator mBeanRegistrator;
+
+    @Inject
+    private CurrentTimeService currentTimeService;
 
     private ErrorCollectorMXBean mbean;
 
@@ -46,12 +51,18 @@ public class ErrorCollectorBean implements ErrorCollectorService {
     }
 
     public void receiveError(Throwable e) {
-        ErrorEntry entry = new ErrorEntry(e);
+        ErrorEntry entry = new ErrorEntry(e, currentTimeService.now());
         errorEntries.add(entry);
     }
 
     @Override
     public Collection<ErrorEntry> getErrors() {
         return errorEntries;
+    }
+
+    public Collection<ErrorEntry> getAndResetErrors() {
+        Collection<ErrorEntry> errors = new ArrayList<>(getErrors());
+        errorEntries.clear();
+        return errors;
     }
 }
