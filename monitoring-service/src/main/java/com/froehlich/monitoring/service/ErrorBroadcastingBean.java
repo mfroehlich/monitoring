@@ -2,6 +2,7 @@ package com.froehlich.monitoring.service;
 
 import com.froehlich.commons.monitoring.entity.ErrorEntry;
 import com.froehlich.commons.monitoring.service.ErrorCollectorService;
+import com.froehlich.monitoring.util.ExceptionPrinter;
 import org.slf4j.Logger;
 
 import javax.ejb.Schedule;
@@ -22,6 +23,9 @@ public class ErrorBroadcastingBean {
     @Inject
     private ErrorCollectorService errorCollectorService;
 
+    @Inject
+    private ExceptionPrinter exceptionPrinter;
+
     @Schedule(hour = "*", minute = "*", second = "*/30", persistent = false)
     public void broadcastErrorsToRecipients() {
 
@@ -37,12 +41,14 @@ public class ErrorBroadcastingBean {
     }
 
     /**
-     * TODO mfroehlich to be implemented completely
+     * Sendet den übergebenen ErrorEntry an die Empfänger (derzeit die Konsole).
      * @param errorEntry
      */
     private void broadcastErrorEntry(ErrorEntry errorEntry) {
         Throwable error = errorEntry.getError();
+        StringBuilder errorStr = exceptionPrinter.getErrorString(error, true);
+
         LocalDateTime errorTimestamp = errorEntry.getErrorTimestamp();
-        logger.debug("An error occurred at " + errorTimestamp + ": " + error);
+        logger.debug("An error occurred at " + errorTimestamp + ": " + "\n" + errorStr);
     }
 }
